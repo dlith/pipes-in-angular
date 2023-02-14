@@ -32,6 +32,9 @@ export class AppComponent {
       started: new Date(2023, 1, 12)
     }
   ];
+
+  filteredStatus = '';
+
   getStatusClasses(server: {instanceType: string, name: string, status: string, started: Date}) {
     return {
       'list-group-item-success': server.status === 'stable',
